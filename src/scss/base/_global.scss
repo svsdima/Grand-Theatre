@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body {
+    background-color: #333333;
+    font-family: $main_font;
+    color: $main_color;
+}
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+.container-slider {
+    max-width: 1770px;
+    padding-left: $aside_width;
+}
+.btn {
+    width: 160px;
+    height: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gold;
+    font-family: $second_font;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.title {
+    font-family: $second_font;
+    font-weight: 300;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    span {
+        color: $gold;
+    }
+}

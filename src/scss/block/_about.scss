@@ -1,0 +1,47 @@
+.about {
+    padding: 150px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__text {
+        max-width: 445px;
+    }
+    &__title {
+        font-family: $second_font;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 29px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &__description {
+        font-family: $main_font;
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__numbers {
+        &-list {
+            padding-top: 25px;
+            &:first-child {
+                padding-top: 40px;
+            }
+            img {
+                width: 70px;
+            }
+        }
+        &-text {
+            margin-top: 15px;
+            font-family: $second_font;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.05em;
+            span {
+                color: $gold;
+            }
+        }
+    }
+}
