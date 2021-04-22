@@ -45,6 +45,11 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     cursor: pointer;
+    transition: 0.4s all ease;
+    &:hover {
+        background-color: $main_color;
+        color: $gold;
+    }
 }
 .title {
     font-family: $second_font;

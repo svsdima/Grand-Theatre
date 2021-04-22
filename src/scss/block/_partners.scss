@@ -1,0 +1,14 @@
+.partners {
+    padding-bottom: 150px;
+    &__list {
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-rows:  1fr auto;
+        row-gap: 80px;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
