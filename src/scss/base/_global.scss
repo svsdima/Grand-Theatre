@@ -18,13 +18,14 @@ li {
     list-style-type: none;
 }
 body {
-    background-color: #333333;
+    background-color: $bg_color;
     font-family: $main_font;
     color: $main_color;
 }
 .container {
-    max-width: $container-width;
+    max-width: $container-width + $container-padding + ($aside_width * 2);
     margin: 0 auto;
+    padding: 0 $aside_width;
 }
 .container-slider {
     max-width: 1770px;
@@ -46,6 +47,9 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.4s all ease;
+}
+.btn-header,
+.btn-form {
     &:hover {
         background-color: $main_color;
         color: $gold;
@@ -62,4 +66,31 @@ body {
     span {
         color: $gold;
     }
+}
+.pageup {
+    opacity: 0;
+	width: 50px ;
+	height: 50px;
+	position: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	bottom: 20px;
+	right: 20px;
+	z-index: 30;
+    font-size: 25px;
+	cursor: pointer;
+    transition: .4s all ease;
+	border-radius: 100%;
+	background-color: $gold;
+	&:hover {
+		background-color: $main_color;
+        color: $gold;
+        box-shadow: 0 0 0 2px rgba($gold, 0.7);
+	}
+	&:active {
+		background-color: #3c4b6d;
+		box-shadow: 1px 0 #0e243f;
+	}
 }

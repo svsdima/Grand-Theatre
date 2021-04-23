@@ -7,8 +7,31 @@
     background: url('../img/bg-header.jpg') center (center / cover) no-repeat;
     height: 100vh;
     position: relative;
+    padding: 50px 0 200px 0;
+    .menu-btn {
+        display: none;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 20;
+        cursor: pointer;
+        background-color: rgba($bg_color, 1);
+        &__inner {
+            width: 40px;
+        }
+        &__line {
+            height: 5px;
+            background-color: $gray;
+            + .menu-btn__line {
+                margin-top: 5px;
+            }
+        }
+    }
     .menu {
-        padding-top: 50px;
         &__list {
             display: flex;
             justify-content: space-between;
@@ -58,7 +81,7 @@
         width: $aside_width;
         left: 0;
         bottom: 0;
-        background-color: rgba(#333333, 0.75);
+        background-color: rgba($bg_color, 0.75);
         padding-bottom: 90px;
         .social {
             &__list {
@@ -104,31 +127,37 @@
         }
     }
     &__wrapper {
-        position: absolute;
+        // position: absolute;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        left: 50%;
-        top: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        width: $container-width;
+        padding-top: 20vh;
+        // left: 50%;
+        // top: 50%;
+        // transform: translateY(-50%) translateX(-50%);
+        // width: $container-width + $container-padding + $aside_width;
+        // padding: 0 $aside_width;
+        // padding-left: $aside_width;
+    
     }
     &__text {
         max-width: 550px;
     }
-    &-title {
+    &__title {
         font-family: $second_font;
         font-weight: bold;
         font-size: 64px;
         line-height: 87px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+        // white-space: nowrap;
     }
-    &-description {
+    &__description {
         margin-top: 50px;
         font-family: $main_font;
         font-size: 14px;
         line-height: 21px; 
+        max-width: 540px;
     }
     
     &__slider {

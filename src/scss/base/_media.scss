@@ -1,0 +1,459 @@
+@media (max-width: calc($container-width + $aside_width)) {
+    .container {
+        margin-left: $aside_width;
+    }
+    .title {
+        color: red;
+    }
+}
+// @media (max-width: 1450px) {
+//     .header {
+//         .menu {
+//             margin-top: 150px;
+//         }
+//         &__aside {
+//             width: 100vw;
+//             height: 100px;
+//             top: 0;
+//             left: 0;
+//             flex-direction: row;
+//             justify-content: flex-start;
+//             align-items: center;
+//             padding-bottom: 0;
+//             padding-left: 90px;
+//         }
+//         &__info {
+//             margin-bottom: 0;
+//             margin-right: 280px;
+//             transform: rotate(0);
+//             &:before {
+//                 left: auto;
+//                 right: -110px;
+//             }
+//         }
+//         .social__list {
+//             display: flex;
+//             align-items: center;
+//             li {
+//                 padding-bottom: 0;
+//                 padding-right: 30px;
+//                 &:last-child {
+//                     padding-right: 0;
+//                 }
+//             }
+//         }
+//     }
+//     .container-slider {
+//         padding-left: 0;
+//     }
+// }
+
+@media (max-width: 1250px) {
+    .header .menu__list :last-child,
+    .header .menu__list li {
+        margin-left: 10px;
+    }
+    .header .menu__list :first-child {
+        margin-left: 0;
+    }
+    .poster-slider {
+        width: 320px;
+    } 
+    .header {
+        &__title {
+            font-size: 58px;
+        }
+        &__description {
+            max-width: 450px;
+        }
+    }
+    .about {
+        &__text {
+            max-width: 380px;
+        }
+        &__img {
+            max-width: 300px;
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .about {
+        &__text {
+            max-width: 300px;
+        }
+        &__img {
+            max-width: 250px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 $container-padding;
+    }
+    .header__wrapper {
+        padding: 25vh $container-padding 0 $container-padding;
+    }
+    .header .menu__list :last-child, 
+    .header .menu__list li {
+        margin-left: 0;
+    }
+    .container-slider {
+        padding-left: 0;
+    }
+    .header {
+        .menu-btn {
+            display: flex;
+            margin-right: 80px;
+            &__line {
+                transition: $transition;
+                &:nth-child(2) {
+                    opacity: 1;
+                }
+                &:first-child {
+                    position: relative;
+                    transform: rotate(0);
+                    top: 0;
+                }
+                &:last-child {
+                    position: relative;
+                    transform: rotate(0);
+                    bottom: 0;
+                }
+            }
+        }
+        .menu {
+            left: -80%;
+            opacity: 0;
+            padding-top: 0;
+            position: fixed;
+            z-index: 6;
+            transition: $transition;
+            margin-top: 150px;
+            &__list {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                span {
+                    font-size: 25px;
+                }
+                li {
+                    padding-bottom: 50px;
+                    margin-left: 0;
+                    &:last-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        &__aside {
+            top: 0;
+            left: 0;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 0;
+            width: 0;
+            height: 100vh;
+            transition: $transition;
+            background-color: rgba(#333333, 1);
+            .social {
+                position: fixed;
+                opacity: 0;
+                transition: 0.6s all ease;
+                top: initial;
+                bottom: 10%;
+                left: -80%;
+                transition: $transition;
+                &__list {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        padding-bottom: 0;
+                        padding-right: 40px;
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        &__info {
+            display: none;
+            margin-bottom: 0;
+            margin-right: 280px;
+            transform: rotate(0);
+            &:before {
+                left: auto;
+                right: -110px;
+            }
+        }
+    }
+    
+    .header__aside.active {
+        width: 320px;
+        height: 100vh;
+        .social {
+            left: $container-padding;
+            opacity: 1;
+        }
+        
+    }
+    .header .menu.active {
+        opacity: 1;
+        left: $container-padding;
+
+    }
+    .header .menu-btn.active {
+        .menu-btn__line {
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:first-child {
+                transform: rotate(45deg);
+                top: 10px;
+            }
+            &:last-child {
+                transform: rotate(-45deg);
+                bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        height: inherit;
+        &__wrapper {
+            padding-top: 10vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        &__title {
+            font-size: 55px;
+            text-align: center;
+        }
+    } 
+    .header__description,
+    .about__description,
+    .about__numbers-text,
+    .contact__left span {
+        font-size: 17px;
+        line-height: 28px;
+    }
+    .about__text,
+    .about__img,
+    .best__text-right {
+        max-width: 450px;
+    }
+    .btn {
+        width: 180px;
+        height: 60px;
+    }
+    .about {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title {
+            text-align: center;
+            font-size: 25px;
+        }
+        &__numbers,
+        &__img {
+            margin-top: 50px;
+        }
+        &__numbers {
+            text-align: center;
+            &-list {
+                padding-top: 40px;
+            }
+        }
+    }
+    .best {
+        &__wrapper {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__star-list {
+            justify-content: center;
+        }
+        &__text {
+            &-left {
+                padding-top: 25px;
+            }
+            &-right {
+                text-align: center;
+            }
+        }
+    }
+    .partners {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .contact {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__right {
+            padding-top: 50px;
+        }
+        .form {
+            &__up {
+                justify-content: center;
+            }
+            &__left {
+                flex-direction: column;
+                &-inner {
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &__text {
+                padding-right: 30px;
+            }
+        }
+        textarea.form__input {
+            min-height: 260px;
+        }
+    }
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__developed {
+            padding-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .partners {
+        &__list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .contact {
+        .form {
+            &__down {
+                padding-top: 50px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            &__text {
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .partners {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+    .contact {
+        .form {
+            &__up {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        textarea.form__input {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .about__title {
+        line-height: 40px;
+    }
+    .poster-slider {
+        width: 280px;
+    }
+    .header__aside.active {
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    .header__description,
+    .about__description,
+    .about__numbers-text,
+    .contact__left span {
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .best__text-right {
+        span {
+            font-size: 30px;
+            line-height: 60px;
+        }
+    }
+    .contact {
+        .form {
+            &__text {
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+    .footer {
+        &__developed {
+            flex-direction: column;
+            &-left {
+                margin-bottom: 20px;
+            }
+            &-right {
+                span {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .pageup {
+        width: 55px;
+	    height: 55px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        &__title {
+            font-size: 55px;
+        }
+        &__description {
+            max-width: 270px;
+        }
+    }
+    .about__text,
+    .about__img {
+        max-width: 270px;
+    }
+    .btn {
+        width: 200px;
+        height: 70px;
+    }
+}

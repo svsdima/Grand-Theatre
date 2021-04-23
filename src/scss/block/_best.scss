@@ -1,5 +1,5 @@
 .best {
-    padding-bottom: 150px;
+    padding-top: 150px;
     &__wrapper {
         background: url('../img/bg-best.jpg') center (center / cover) no-repeat;
         display: flex;
@@ -13,6 +13,9 @@
         padding-bottom: 25px;
         li {
             padding-right: 25px;
+            &:last-child {
+                padding-right: 0;
+            }
         }
         i {
             color: $gold;

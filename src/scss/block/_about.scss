@@ -1,5 +1,5 @@
 .about {
-    padding: 150px 0;
+    padding-top: 150px;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -42,6 +42,13 @@
             span {
                 color: $gold;
             }
+        }
+    }
+    &__img {
+        max-width: 350px;
+        img {
+            width: 100%;
+            object-fit: contain;
         }
     }
 }
