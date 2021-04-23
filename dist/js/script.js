@@ -86,6 +86,31 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/aos.js":
+/*!***********************!*\
+  !*** ./src/js/aos.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const aos = () => {
+  AOS.init({
+    disable: function () {
+      let maxWidth = 900;
+      return window.innerWidth <= maxWidth;
+    },
+    offset: 200,
+    duration: 800,
+    once: true
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (aos);
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -98,10 +123,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swiper */ "./src/js/swiper.js");
 /* harmony import */ var _menuBurger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menuBurger */ "./src/js/menuBurger.js");
 /* harmony import */ var _scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scrolling */ "./src/js/scrolling.js");
+/* harmony import */ var _aos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./aos */ "./src/js/aos.js");
+
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  Object(_aos__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_swiper__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_menuBurger__WEBPACK_IMPORTED_MODULE_1__["default"])('.menu-btn', '.header__aside', '.menu');
   Object(_scrolling__WEBPACK_IMPORTED_MODULE_2__["default"])('.pageup', '.header__aside', '.menu', '.menu-btn');
