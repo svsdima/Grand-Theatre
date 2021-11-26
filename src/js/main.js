@@ -6,6 +6,6 @@ import aos from './aos';
 window.addEventListener('DOMContentLoaded', () => {
     aos();
     swiper();
-    menuBurger('.menu-btn', '.header__aside', '.menu');
-    scrolling('.pageup', '.header__aside', '.menu', '.menu-btn');
+    menuBurger('.menu-btn', '.header__aside', '.menu', '.social');
+    scrolling('.pageup', '.header__aside', '.menu', '.menu-btn', '.social');
 });
